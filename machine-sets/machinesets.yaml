@@ -6,7 +6,7 @@ metadata:
   name: dgoodwin-dev-t6drv-additional-compute
   namespace: openshift-machine-api
 spec:
-  replicas: 3
+  replicas: 1
   selector:
     matchLabels:
       machine.openshift.io/cluster-api-cluster: dgoodwin-dev-t6drv
