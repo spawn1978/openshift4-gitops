@@ -12,14 +12,14 @@ spec:
       machine.openshift.io/cluster-api-cluster: dgoodwin-dev-t6drv
       machine.openshift.io/cluster-api-machine-role: worker
       machine.openshift.io/cluster-api-machine-type: worker
-      machine.openshift.io/cluster-api-machineset: dgoodwin-dev-t6drv-worker-us-east-1c
+      machine.openshift.io/cluster-api-machineset: dgoodwin-dev-t6drv-worker-us-east-1f
   template:
     metadata:
       labels:
         machine.openshift.io/cluster-api-cluster: dgoodwin-dev-t6drv
         machine.openshift.io/cluster-api-machine-role: worker
         machine.openshift.io/cluster-api-machine-type: worker
-        machine.openshift.io/cluster-api-machineset: dgoodwin-dev-t6drv-worker-us-east-1c
+        machine.openshift.io/cluster-api-machineset: dgoodwin-dev-t6drv-worker-us-east-1f
     spec:
       providerSpec:
         value:
@@ -39,7 +39,7 @@ spec:
           instanceType: m4.large
           kind: AWSMachineProviderConfig
           placement:
-            availabilityZone: us-east-1c
+            availabilityZone: us-east-1f
             region: us-east-1
           securityGroups:
           - filters:
@@ -50,7 +50,7 @@ spec:
             filters:
             - name: tag:Name
               values:
-              - dgoodwin-dev-t6drv-private-us-east-1c
+              - dgoodwin-dev-t6drv-private-us-east-1f
           tags:
           - name: kubernetes.io/cluster/dgoodwin-dev-t6drv
             value: owned
