@@ -1,16 +1,15 @@
 apiVersion: machine.openshift.io/v1beta1
 kind: MachineSet
 metadata:
-  creationTimestamp: '2020-06-02T06:29:11Z'
+ 
   generation: 1
   labels:
     machine.openshift.io/cluster-api-cluster: ocp-jkeykvjoznryxop20-sphcz
   name: argo-ocp-jkeykvjoznryxop20-sphcz-worker-us-east-1c
   namespace: openshift-machine-api
   resourceVersion: '1116250'
-  selfLink: >-
-    /apis/machine.openshift.io/v1beta1/namespaces/openshift-machine-api/machinesets/ocp-jkeykvjoznryxop20-sphcz-worker-us-east-1c
-  uid: 5ec37d4a-a49a-11ea-b1d4-0af387c8490f
+  
+ 
 spec:
   replicas: 2
   selector:
@@ -74,13 +73,8 @@ spec:
             filters:
               - name: 'tag:Name'
                 values:
-                  - ocp-jkeykvjoznryxop20-sphcz-private-us-east-1c
+                  - argo-ocp-jkeykvjoznryxop20-sphcz-private-us-east-1c
           apiVersion: awsproviderconfig.openshift.io/v1beta1
           iamInstanceProfile:
             id: ocp-jkeykvjoznryxop20-sphcz-worker-profile
-status:
-  availableReplicas: 2
-  fullyLabeledReplicas: 2
-  observedGeneration: 1
-  readyReplicas: 2
-  replicas: 2
+
