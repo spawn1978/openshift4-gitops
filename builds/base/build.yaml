@@ -23,7 +23,7 @@ spec:
       value: labelvalue
     resources:
       limits:
-        cpu: 100m
+        cpu: 1000m
         memory: 50Mi
       requests:
         cpu: 10m
