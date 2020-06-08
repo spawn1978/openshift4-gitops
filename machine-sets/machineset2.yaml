@@ -66,15 +66,5 @@ spec:
               value: gls
             - name: Stack
               value: project ocp-jkeykvjoznryxop200602
-          deviceIndex: 0
-          ami:
-            id: ami-01e7fdcb66157b224
-          subnet:
-            filters:
-              - name: 'tag:Name'
-                values:
-                  - argo-ocp-jkeykvjoznryxop20-sphcz-private-us-east-1c
-          apiVersion: awsproviderconfig.openshift.io/v1beta1
-          iamInstanceProfile:
-            id: ocp-jkeykvjoznryxop20-sphcz-worker-profile
-
+          
+         
