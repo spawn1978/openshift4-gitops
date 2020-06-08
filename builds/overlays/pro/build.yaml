@@ -8,5 +8,5 @@ metadata:
 spec:
   buildDefaults:
     imageLabels:
-    - name: prodbuild
+    - name: prodbuild2
       value: "true"
