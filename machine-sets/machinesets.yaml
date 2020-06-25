@@ -21,38 +21,55 @@ spec:
         machine.openshift.io/cluster-api-machine-type: worker
         machine.openshift.io/cluster-api-machineset: dgoodwin-dev-t6drv-worker-us-east-1c
     spec:
+      metadata:
+        creationTimestamp: null
       providerSpec:
         value:
-          ami:
-            id: ami-046fe691f52a953f9
-          apiVersion: awsproviderconfig.openshift.io/v1beta1
-          blockDevices:
-          - ebs:
-              iops: 0
-              volumeSize: 22
-              volumeType: gp2
-          credentialsSecret:
-            name: aws-cloud-credentials
-          deviceIndex: 0
-          iamInstanceProfile:
-            id: ocp-gkzoprdgmozpkzy20-sqlpj-worker-profile
-          instanceType: m4.large
-          kind: AWSMachineProviderConfig
-          placement:
-            availabilityZone: sa-east-1c
-            region: sa-east-1	
-          securityGroups:
-          - filters:
-            - name: tag:Name
-              values:
-              - ocp-gkzoprdgmozpkzy20-sqlpj-worker-sg
-          subnet:
-            filters:
-            - name: tag:Name
-              values:
-              - ocp-gkzoprdgmozpkzy20-sqlpj-private-sa-east-1c
-          tags:
-          - name: kubernetes.io/cluster/dgoodwin-dev-t6drv
-            value: owned
           userDataSecret:
             name: worker-user-data
+          placement:
+            availabilityZone: sa-east-1c
+            region: sa-east-1
+          credentialsSecret:
+            name: aws-cloud-credentials
+          instanceType: m5.xlarge
+          metadata:
+            creationTimestamp: null
+          publicIp: null
+          blockDevices:
+            - ebs:
+                iops: 0
+                volumeSize: 120
+                volumeType: gp2
+          securityGroups:
+            - filters:
+                - name: 'tag:Name'
+                  values:
+                    - ocp-gkzoprdgmozpkzy20-sqlpj-worker-sg
+          kind: AWSMachineProviderConfig
+          tags:
+            - name: kubernetes.io/cluster/ocp-gkzoprdgmozpkzy20-sqlpj
+              value: owned
+            - name: Stack
+              value: project ocp-gkzoprdgmozpkzy200621
+            - name: course_name
+              value: do280
+            - name: env_type
+              value: ocp4-workshop
+            - name: guid
+              value: gkzoprdgmozpkzy200621
+            - name: owner
+              value: gls-platforms@redhat.com
+            - name: platform
+              value: gls
+          deviceIndex: 0
+          ami:
+            id: ami-03f6b71e93e630dab
+          subnet:
+            filters:
+              - name: 'tag:Name'
+                values:
+                  - ocp-gkzoprdgmozpkzy20-sqlpj-private-sa-east-1c
+          apiVersion: awsproviderconfig.openshift.io/v1beta1
+          iamInstanceProfile:
+            id: ocp-gkzoprdgmozpkzy20-sqlpj-worker-profile 
