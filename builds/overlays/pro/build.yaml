@@ -8,5 +8,5 @@ metadata:
 spec:
   buildDefaults:
     imageLabels:
-    - name: prodbuild
+    - name: prodbuildgalicia
       value: "true"
