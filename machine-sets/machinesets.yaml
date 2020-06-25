@@ -28,7 +28,7 @@ spec:
           apiVersion: awsproviderconfig.openshift.io/v1beta1
           blockDevices:
           - ebs:
-              iops: 100
+              iops: 0
               volumeSize: 22
               volumeType: gp2
           credentialsSecret:
